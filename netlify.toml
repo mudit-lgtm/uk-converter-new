@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+  command = "echo 'Static site - no build needed'"
+
+[[redirects]]
+  from = "https://ukgasconverter.netlify.app/*"
+  to = "https://ukconverter.site/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://ukgasconverter.netlify.app/*"
+  to = "https://ukconverter.site/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=3600"

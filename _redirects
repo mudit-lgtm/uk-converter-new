@@ -1,0 +1,6 @@
+# Redirect old domain to new domain
+https://ukgasconverter.netlify.app/* https://ukconverter.site/:splat 301!
+http://ukgasconverter.netlify.app/* https://ukconverter.site/:splat 301!
+
+# SPA fallback (not needed for static site but good to have)
+/*/           /index.html   200
