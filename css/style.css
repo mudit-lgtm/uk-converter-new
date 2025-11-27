@@ -23,6 +23,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-light);
+    overflow-x: hidden; /* Fix horizontal scroll */
+    max-width: 100vw;
 }
 
 /* Header Styles */
@@ -219,6 +221,14 @@ nav {
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Bold keywords */
+.keyword, strong, b {
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
 /* Hero Section */
@@ -544,6 +554,22 @@ footer {
     }
 }
 
+/* Hide sidebar on mobile and tablet */
+@media (max-width: 1023px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .main-content {
+        padding: 20px 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
@@ -567,6 +593,7 @@ footer {
         box-shadow: none;
         border-top: 1px solid var(--border-color);
         display: none;
+        max-width: 100%;
     }
     
     .mega-menu > li:hover .mega-menu-dropdown,
@@ -576,7 +603,7 @@ footer {
     }
     
     .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .hero p {
@@ -593,11 +620,25 @@ footer {
     }
     
     .main-content {
-        padding: 20px;
+        padding: 15px 10px;
+        border-radius: 0;
     }
     
     .category-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .conversion-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    .container {
+        padding: 5px;
     }
 }
 

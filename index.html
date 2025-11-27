@@ -286,8 +286,95 @@
             <!-- Hero Section -->
             <div class="hero">
                 <h1>🇬🇧 UK Converter - Professional Conversion Calculators</h1>
-                <p>Fast, accurate, and free conversion tools for gas, energy, volume, and air quality measurements. Trusted by thousands of UK homeowners and professionals.</p>
+                <p>Fast, accurate, and free conversion tools for <strong>gas</strong>, <strong>energy</strong>, <strong>volume</strong>, and air quality measurements. Trusted by thousands of UK homeowners and professionals.</p>
             </div>
+
+            <!-- Gas M³ to kWh Converter Tool -->
+            <section class="content-section">
+                <h2><i class="fas fa-fire"></i> <strong>Gas M³ to kWh Converter</strong> - Most Popular Tool</h2>
+                <p>Convert <strong>cubic meters of gas</strong> to <strong>kilowatt-hours</strong> instantly using UK standard <strong>calorific values</strong>. This is our most popular converter used by thousands daily to understand their <strong>gas bills</strong>.</p>
+                
+                <!-- Converter Tool -->
+                <div class="converter-tool" style="margin-top: 20px;">
+                    <form id="converter-form-home" onsubmit="return false;">
+                        <div class="converter-form">
+                            <div class="form-group">
+                                <label for="from-value-home"><strong>Cubic Meters (m³)</strong></label>
+                                <input type="number" id="from-value-home" placeholder="Enter m³ value" step="any">
+                            </div>
+                            
+                            <button type="button" class="swap-btn" title="Swap units" onclick="swapHomePage()">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            
+                            <div class="form-group">
+                                <label for="to-value-home"><strong>Kilowatt-hours (kWh)</strong></label>
+                                <input type="number" id="to-value-home" placeholder="Result in kWh" step="any">
+                            </div>
+                        </div>
+                        
+                        <div id="result-box-home" class="result-box" style="display: none; margin-top: 20px;">
+                            <h3><i class="fas fa-check-circle"></i> Conversion Result</h3>
+                            <div class="result-value" id="result-value-home">0</div>
+                            <p id="result-text-home" style="margin: 10px 0 0; color: var(--text-light);">Using UK standard calorific value of <strong>10.55 kWh/m³</strong></p>
+                        </div>
+                    </form>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 6px;">
+                        <p style="margin: 0; color: var(--text-light);"><strong>Formula:</strong> m³ × 10.55 = kWh (UK Standard)</p>
+                        <p style="margin: 10px 0 0;"><a href="converters/gas-m3-to-kwh.html" style="color: var(--primary-color); font-weight: 600;">View detailed Gas M³ to kWh converter →</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+            // Home page converter functionality
+            (function() {
+                const fromInput = document.getElementById('from-value-home');
+                const toInput = document.getElementById('to-value-home');
+                const resultBox = document.getElementById('result-box-home');
+                const resultValue = document.getElementById('result-value-home');
+                
+                if (fromInput) {
+                    fromInput.addEventListener('input', function() {
+                        const value = parseFloat(this.value);
+                        if (!isNaN(value)) {
+                            const result = value * 10.55;
+                            toInput.value = result.toFixed(4);
+                            resultValue.textContent = result.toFixed(4) + ' kWh';
+                            resultBox.style.display = 'block';
+                        } else {
+                            toInput.value = '';
+                            resultBox.style.display = 'none';
+                        }
+                    });
+                }
+                
+                if (toInput) {
+                    toInput.addEventListener('input', function() {
+                        const value = parseFloat(this.value);
+                        if (!isNaN(value)) {
+                            const result = value / 10.55;
+                            fromInput.value = result.toFixed(4);
+                            resultValue.textContent = value.toFixed(4) + ' kWh';
+                            resultBox.style.display = 'block';
+                        } else {
+                            fromInput.value = '';
+                            resultBox.style.display = 'none';
+                        }
+                    });
+                }
+                
+                window.swapHomePage = function() {
+                    const temp = fromInput.value;
+                    fromInput.value = toInput.value;
+                    toInput.value = temp;
+                    if (fromInput.value) {
+                        fromInput.dispatchEvent(new Event('input'));
+                    }
+                };
+            })();
+            </script>
 
             <!-- Popular Converters Grid -->
             <section class="content-section">
