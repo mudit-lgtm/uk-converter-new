@@ -663,3 +663,44 @@ footer {
         padding: 20px 15px;
     }
 }
+
+
+/* Link visibility fixes */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.content-section a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.sidebar-links a {
+    color: var(--text-dark) !important;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+    background: var(--bg-light);
+    color: var(--primary-color) !important;
+}
+
+.footer-links a {
+    color: #d1d5db !important;
+}
+
+.footer-links a:hover {
+    color: white !important;
+}
+
+/* Make breadcrumb links visible */
+nav a {
+    color: var(--primary-color) !important;
+}

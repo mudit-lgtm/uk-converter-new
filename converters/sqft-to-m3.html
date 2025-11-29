@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sq Ft to M³ Converter - UK Converter</title>
     <meta name="description" content="Convert square feet to cubic meters. Imperial area to metric volume conversion.">
-    <meta name="keywords" content="sqft to m3, square feet to cubic meters, area to volume, imperial to metric">
+    <meta name="keywords" content="sqft to m3, square feet to cubic meters, area to volume, imperial to metric, gas m3 to kwh calculator, gas units to kwh calculator, m3 to kwh calculator, gas m3 to kwh calculator uk, gas bill calculator kwh, cubic meter to kwh calculator, gas conversion calculator uk, gas meter calculator, energy converter, uk gas converter">
     <meta name="robots" content="index, follow">
+    <meta name="conversion-type" content="sqft-to-m3">
     <link rel="canonical" href="https://ukconverter.site/converters/sqft-to-m3.html">
     
     <!-- Open Graph -->
@@ -385,7 +386,7 @@
                 <h3>Why Use Our <strong>Sq Ft to M³ Converter</strong>?</h3>
                 <p>Our <strong>converter tool</strong> provides instant, accurate results using official <strong>UK conversion factors</strong>. Whether you're a homeowner trying to understand your <strong>energy bill</strong>, a student learning about <strong>energy units</strong>, or a professional engineer performing calculations, this tool delivers reliable results every time.</p>
                 
-                <p>The <strong>conversion</strong> happens automatically as you type, making it quick and easy to perform multiple calculations. You can convert in both directions by entering values in either field.</p>
+                <p>Our <strong>gas meter reading calculator</strong> and <strong>energy converter</strong> tools help UK homeowners understand their <strong>gas bills</strong> and <strong>energy consumption</strong>. The <strong>conversion</strong> happens automatically as you type, making it quick and easy to perform multiple calculations. You can convert in both directions by entering values in either field.</p>
             </section>
             
             <section class="content-section">
@@ -535,10 +536,19 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 <strong>UK Converter</strong>. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
+            <p>&copy; <span id="current-year">2024</span> <strong>UK Converter</strong>. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
         </div>
     </footer>
     
     <script src="../js/converter.js"></script>
+    <script>
+        // Dynamic year update
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>

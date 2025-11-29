@@ -158,10 +158,18 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 UK Converter. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
+            <p>&copy; <span id="current-year">2024</span> UK Converter. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
         </div>
     </footer>
 
     <script src="../js/converter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>

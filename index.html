@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UK Converter - Free Gas, Energy & Volume Conversion Calculators</title>
     <meta name="description" content="Professional UK conversion calculators for gas m³ to kWh, energy units, volume, and air quality measurements. Fast, accurate, and free to use. Trusted by thousands.">
-    <meta name="keywords" content="gas m3 to kwh calculator, gas units to kwh, m3 to kwh, uk gas converter, energy converter, volume converter">
+    <meta name="keywords" content="gas m3 to kwh calculator, gas units to kwh calculator, m3 to kwh, m3 to kwh calculator, gas m3 to kwh calculator uk, convert gas units to kwh, convert m3 to kwh, gas meter reading to kwh, calorific value of natural gas, gas bill calculator kwh, cubic meter to kwh calculator, natural gas m3 to kwh, kwh to m3 gas, m3 gas to kwh, gas conversion calculator uk">
     <meta name="author" content="UK Converter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ukconverter.site/">
@@ -705,5 +705,14 @@
 
     <!-- Custom JS -->
     <script src="js/converter.js"></script>
+    <script>
+        // Dynamic year update
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>

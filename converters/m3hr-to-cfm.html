@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M³/hr to CFM Converter - UK Converter</title>
     <meta name="description" content="Convert cubic meters per hour to cubic feet per minute. Reverse flow rate conversion.">
-    <meta name="keywords" content="m3/hr to cfm, flow rate converter, ventilation calculation, air flow conversion">
+    <meta name="keywords" content="m3/hr to cfm, flow rate converter, ventilation calculation, air flow conversion, gas m3 to kwh calculator, gas units to kwh calculator, m3 to kwh calculator, gas m3 to kwh calculator uk, gas bill calculator kwh, cubic meter to kwh calculator, gas conversion calculator uk, gas meter calculator, energy converter, uk gas converter">
     <meta name="robots" content="index, follow">
+    <meta name="conversion-type" content="cfm-to-m3hr">
     <link rel="canonical" href="https://ukconverter.site/converters/m3hr-to-cfm.html">
     
     <!-- Open Graph -->
@@ -385,7 +386,7 @@
                 <h3>Why Use Our <strong>M³/hr to CFM Converter</strong>?</h3>
                 <p>Our <strong>converter tool</strong> provides instant, accurate results using official <strong>UK conversion factors</strong>. Whether you're a homeowner trying to understand your <strong>energy bill</strong>, a student learning about <strong>energy units</strong>, or a professional engineer performing calculations, this tool delivers reliable results every time.</p>
                 
-                <p>The <strong>conversion</strong> happens automatically as you type, making it quick and easy to perform multiple calculations. You can convert in both directions by entering values in either field.</p>
+                <p>Our <strong>gas meter reading calculator</strong> and <strong>energy converter</strong> tools help UK homeowners understand their <strong>gas bills</strong> and <strong>energy consumption</strong>. The <strong>conversion</strong> happens automatically as you type, making it quick and easy to perform multiple calculations. You can convert in both directions by entering values in either field.</p>
             </section>
             
             <section class="content-section">
@@ -535,10 +536,19 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 <strong>UK Converter</strong>. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
+            <p>&copy; <span id="current-year">2024</span> <strong>UK Converter</strong>. All rights reserved. | <a href="../sitemap.xml" style="color: #9ca3af;">Sitemap</a></p>
         </div>
     </footer>
     
     <script src="../js/converter.js"></script>
+    <script>
+        // Dynamic year update
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>
