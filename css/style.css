@@ -704,3 +704,38 @@ a:hover {
 nav a {
     color: var(--primary-color) !important;
 }
+
+/* Page Header Styles */
+.page-header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+}
+
+.page-header .page-subtitle {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.95;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .page-header .page-subtitle {
+        font-size: 0.95em;
+    }
+}

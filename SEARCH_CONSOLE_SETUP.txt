@@ -1,0 +1,20 @@
+<!-- 
+GOOGLE SEARCH CONSOLE VERIFICATION
+
+To verify your site:
+1. Go to Google Search Console (https://search.google.com/search-console)
+2. Add property: https://ukconverter.site
+3. Choose "HTML tag" verification method
+4. Copy the meta tag they provide
+5. Add it to the <head> section of index.html
+6. Example: <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+
+IMPORTANT: Do this for BOTH domains:
+- https://ukconverter.site
+- https://ukgasconverter.netlify.app
+
+Then in Search Console:
+- Use "Change of Address" tool to migrate from old to new domain
+- Submit sitemap.xml for both properties
+- Request indexing for key pages
+-->

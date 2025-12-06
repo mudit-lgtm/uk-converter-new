@@ -2,6 +2,7 @@
   publish = "."
   command = "echo 'Static site - no build needed'"
 
+# Redirect old domain to new domain (only for domain changes, not internal pages)
 [[redirects]]
   from = "https://ukgasconverter.netlify.app/*"
   to = "https://ukconverter.site/:splat"
@@ -14,6 +15,7 @@
   status = 301
   force = true
 
+# Security and performance headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -21,4 +23,37 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=3600"
+    # Shorter cache for better crawling and updates
+    Cache-Control = "public, max-age=1800"
+    # Allow all origins for fonts and resources
+    Access-Control-Allow-Origin = "*"
+
+# Specific cache for static assets
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# HTML pages - short cache for frequent updates and crawling
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=900"
+
+# Sitemap - very short cache for frequent crawling
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=600"
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=600"
+    Content-Type = "text/plain; charset=utf-8"
